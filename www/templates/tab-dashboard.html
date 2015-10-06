@@ -1,0 +1,32 @@
+<ion-view view-title="Dashboard">
+  <ion-content padding="true" class="has-header">
+    <form>
+      <button class="button button-assertive button-block  icon-left ion-alert-circled">Alertar Galão Vazio</button>
+      <!-- <div class="list card">
+        <div class="item item-divider">Galão vazio?</div>
+        <div class="item item-body">
+          <button class="button button-assertive button-block  icon-left ion-alert-circled">Alertar Galão Vazio</button>
+        </div>
+      </div> -->
+
+      <ion-list>
+        <ion-item class="item-divider">Próximas Trocas</ion-item>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="trocador in trocadores | limitTo:3" type="item-text-wrap" href="#/tab/trocadores/{{trocador.id}}">
+          <img ng-src="{{trocador.foto}}">
+          <h2>{{trocador.nome}}</h2>
+          <p>Total de trocas: {{trocador.qtdTrocada}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+
+          <ion-option-button class="button-assertive" ng-click="remove(trocador)">
+            Notificar
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+
+      <button class="button button-positive button-block icon-left ion-thumbsup">Notificar Galão Trocado</button>
+
+    </form>
+  </ion-content>
+</ion-view>
+
+

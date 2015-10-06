@@ -1,0 +1,15 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{trocador.name}}">
+  <ion-content class="padding">
+    <div class="item item-thumbnail-left">
+      <img src="{{trocador.foto}}">
+      <h2>{{trocador.nome}}</h2>
+      <p>Total de trocas: {{trocador.qtdTrocada}}</p>
+    </div>
+  </ion-content>
+</ion-view>
